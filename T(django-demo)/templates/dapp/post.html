@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="./jquery.min.js"></script>
+	<script type="text/javascript" src="./semantic.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="./icon.min.css">
+</head>
+<body>
+	<div class="ui segment">
+		<center><h2>Title here</h2></center>
+		
+	</div>
+	<table class="ui table" border="10px">
+		<tr>
+			<td width="60%">
+				<center><h4>Room Image</h4>
+				<img src="./demo.jpg" height="200px" id="roomimg"></center>
+			</td>
+			<td rowspan="2" width="20%">
+				<input type="text" placeholder="wall_width"><br><br>
+				<input type="text" placeholder="wall_height"><br><br>
+				<input type="text" placeholder="art_width"><br><br>
+				<input type="text" placeholder="art_height"><br><br>
+				<input type="text" placeholder="depth"><br><br>
+				<button>Mark Points</button><br><br>
+				<input type="text" placeholder="move_art_x"><br><br>
+				<input type="text" placeholder="move_art_y"><br><br>
+				<input type="text" placeholder="move_shadow"><br><br>
+				<button>Zoom</button><br><br>
+
+				<center><h4>Border Image</h4>
+				<img src="./demo.jpg" width="200px"id="borderimg"></center>
+
+			</td>
+			<td rowspan="2"  width="20%">
+				<form class="ui form">
+					<strong>Room Image</strong>
+					<input type="text" id="roomimage" name="roomimage" oninput="updateRoomImg()">
+					<br><br>
+					<strong>Art Image</strong>
+					<input type="text" id="artimage" name="artimage"oninput="updateArtImg()">
+					<br><br>
+					<strong>Border Image</strong>
+					<input type="text" id="borderimage" name="borderimage" onfocusout="updateBorderImg()">
+					
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<center><h4>Art Image</h4>
+				<img src="./demo.jpg" height="200px" id="artimg"></center>
+			</td>
+		</tr>
+	</table>
+
+<script type="text/javascript">
+function updateRoomImg(){
+    var fil=document.getElementById("roomimage");
+    document.getElementById('roomimg').src=fil.value;
+}
+function updateArtImg(){
+    var fil=document.getElementById("artimage");
+    document.getElementById('artimg').src=fil.value;
+}
+function updateBorderImg(){
+    var fil=document.getElementById("borderimage");
+    document.getElementById('borderimg').src=fil.value;
+}
+
+</script>
+
+</body>
+</html>
